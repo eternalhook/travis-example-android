@@ -8,6 +8,9 @@ before_cache:
 
  - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
 
+addon:
+  artifacts: true
+
 cache:
 
  directories:
@@ -86,7 +89,8 @@ before_install:
 script:
 
 #- "./gradlew clean build connectedCheck -PdisablePreDex --stacktrace"
-- "./gradlew clean build"
+#- "./gradlew clean build"
+- "./gradlew assemble"
 
 before_deploy:
 
